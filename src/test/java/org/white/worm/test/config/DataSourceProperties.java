@@ -3,8 +3,8 @@ package org.white.worm.test.config;
 /**
  * <p></p >
  *
- * @author baixiong
- * @version $Id: DataSourceProperties.java, v 0.1 2019年09月03日 17:20:00 baixiong Exp$
+ * @author white
+ * @version $Id: DataSourceProperties.java, v 0.1 2019年09月03日 17:20:00 white Exp$
  */
 public class DataSourceProperties {
     private String driverClassName;

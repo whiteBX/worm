@@ -15,8 +15,8 @@ import javax.annotation.Resource;
 /**
  * <p></p >
  *
- * @author baixiong
- * @version $Id: TestOrm.java, v 0.1 2019年09月03日 16:27:00 baixiong Exp$
+ * @author white
+ * @version $Id: TestOrm.java, v 0.1 2019年09月03日 16:27:00 white Exp$
  */
 @RunWith(SpringRunner.class)
 @SpringBootApplication

@@ -15,8 +15,8 @@ import javax.sql.DataSource;
 /**
  * <p></p >
  *
- * @author baixiong
- * @version $Id: BeanConfig.java, v 0.1 2019年09月03日 16:44:00 baixiong Exp$
+ * @author white
+ * @version $Id: BeanConfig.java, v 0.1 2019年09月03日 16:44:00 white Exp$
  */
 @Configuration
 @PropertySource("classpath:applications.properties")
