@@ -1,6 +1,7 @@
 package org.white.worm.test.entity;
 
 import org.white.worm.aspect.Column;
+import org.white.worm.aspect.DataBase;
 import org.white.worm.aspect.SplitKey;
 import org.white.worm.aspect.Table;
 
@@ -12,8 +13,9 @@ import java.sql.JDBCType;
  * @author white
  * @version $Id: UserDO.java, v 0.1 2019年09月02日 16:30:00 white Exp$
  */
+@DataBase("db")
 @Table("user_")
-@SplitKey(column = "id", tableNum = 8)
+@SplitKey(column = "id", dbNum = 2, tableNum = 8)
 public class UserDO {
 
     @Column(value = "id", columnType = JDBCType.BIGINT)

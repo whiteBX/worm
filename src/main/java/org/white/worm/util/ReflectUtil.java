@@ -1,6 +1,7 @@
 package org.white.worm.util;
 
 import org.white.worm.aspect.Column;
+import org.white.worm.aspect.DataBase;
 import org.white.worm.aspect.SplitKey;
 import org.white.worm.aspect.Table;
 import org.white.worm.constant.ErrorCode;
@@ -16,6 +17,15 @@ import java.lang.reflect.Field;
  * @version $Id: ReflectUtil.java, v 0.1 2019年09月02日 17:01:00 white Exp$
  */
 public class ReflectUtil {
+
+    /**
+     * 解析库名
+     */
+    public static String parseDB(Class clazz) {
+        AssertUtil.isTrue(clazz.isAnnotationPresent(DataBase.class), ErrorCode.ACCESS_ERROR, "class need annotation DataBase");
+        DataBase table = (DataBase) clazz.getDeclaredAnnotation(DataBase.class);
+        return table.value();
+    }
 
     /**
      * 解析表名
@@ -69,6 +79,7 @@ public class ReflectUtil {
      */
     public static TableMeta parseMeta(Class clazz) {
         TableMeta meta = new TableMeta();
+        meta.setDbName(parseDB(clazz));
         meta.setTableName(parseTable(clazz));
         meta.setTableClass(clazz);
         meta.setSplitKey(parseSplitKey(clazz));

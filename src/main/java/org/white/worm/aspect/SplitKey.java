@@ -20,6 +20,11 @@ public @interface SplitKey {
     String column();
 
     /**
+     * 分库数量
+     */
+    int dbNum();
+
+    /**
      * 分表数量
      */
     int tableNum();

@@ -14,6 +14,10 @@ import java.util.List;
  */
 public class TableMeta {
     /**
+     * 库名
+     */
+    private String dbName;
+    /**
      * 表名
      */
     private String tableName;
@@ -98,6 +102,14 @@ public class TableMeta {
             columnMetaList = new ArrayList<>();
         }
         columnMetaList.add(new ColumnMeta(field, column, jdbcType));
+    }
+
+    public String getDbName() {
+        return dbName;
+    }
+
+    public void setDbName(String dbName) {
+        this.dbName = dbName;
     }
 
     public SplitKey getSplitKey() {
